@@ -1,6 +1,6 @@
 # AI Engineer — hands-on session
 
-Supporting notebooks for an introductory talk on LLMs. Everything runs in **Google Colab** against free [OpenRouter](https://openrouter.ai/) models, using the `openai` library.
+Supporting notebooks for an introductory talk on LLMs. Everything runs in **Google Colab** against free models on [Groq](https://groq.com/), using the `openai` library.
 
 The idea that runs through the whole session:
 
@@ -18,13 +18,10 @@ The idea that runs through the whole session:
 
 ## Setup
 
-In Colab, open the **Secrets** panel (key icon) and add the keys you want to use, enabling *Notebook access* on each:
+Create a free API key at https://console.groq.com/keys
 
-| Secret | Where to get it |
-|---|---|
-| `OPENROUTER_API_KEY` | https://openrouter.ai/keys |
-| `GROQ_API_KEY` | https://console.groq.com/keys *(optional)* |
+In Colab, open the **Secrets** panel (key icon), add it as `GROQ_API_KEY` and enable *Notebook access*. Outside Colab, set it as an environment variable or let the notebook prompt you.
 
-Then run the cells in order. Switch the `PROVIDER` variable to move between providers — the rest of the notebook is unchanged.
+Then run the cells in order.
 
 > Never commit your API key. Use Colab Secrets or an environment variable.
