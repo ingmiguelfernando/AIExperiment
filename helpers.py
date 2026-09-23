@@ -48,9 +48,14 @@ def plot_temperature(labels, scores, temperatures=(0.2, 1.0, 2.0)) -> None:
     )
 
     for axis, temperature in zip(np.atleast_1d(axes), temperatures):
-        shifted = scores / temperature
-        weights = np.exp(shifted - shifted.max())
-        probabilities = weights / weights.sum()
+        if temperature == 0:
+            # No dice roll at all: the highest score wins every time.
+            probabilities = np.zeros_like(scores)
+            probabilities[scores.argmax()] = 1.0
+        else:
+            shifted = scores / temperature
+            weights = np.exp(shifted - shifted.max())
+            probabilities = weights / weights.sum()
 
         axis.bar(labels, probabilities, color="#4c78a8")
         axis.set_title(f"temperature = {temperature}")
