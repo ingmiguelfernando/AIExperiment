@@ -13,6 +13,7 @@ import numpy as np
 from IPython.display import HTML, display
 
 _PALETTE = ["#ffd6a5", "#caffbf", "#9bf6ff", "#bdb2ff", "#ffc6ff", "#fdffb6"]
+_PLOT_COLOURS = ["#4c78a8", "#f58518", "#54a24b", "#e45756", "#b279a2"]
 
 
 def show_tokens(text: str, encoder) -> None:
@@ -111,3 +112,49 @@ def launch_chat(respond, title=""):
     options = {"type": "messages"} if supports_type else {}
 
     return gr.ChatInterface(adapted, title=title, **options).launch()
+
+
+def plot_vectors(vectors, labels, hover_texts, dimensions=2, title="The knowledge base as geometry"):
+    """Squash embeddings down to 2D or 3D with t-SNE and plot them coloured by label."""
+    import plotly.graph_objects as go
+    from sklearn.manifold import TSNE
+
+    vectors = np.asarray(vectors)
+    perplexity = min(30, max(5, len(vectors) - 1))
+
+    reduced = TSNE(
+        n_components=dimensions,
+        random_state=42,
+        perplexity=perplexity,
+        init="pca",
+    ).fit_transform(vectors)
+
+    groups = sorted(set(labels))
+    colours = {name: _PLOT_COLOURS[i % len(_PLOT_COLOURS)] for i, name in enumerate(groups)}
+
+    traces = []
+    for name in groups:
+        picked = [i for i, label in enumerate(labels) if label == name]
+        coords = reduced[picked]
+        marker = {"size": 5, "color": colours[name], "opacity": 0.85}
+        shared = {
+            "mode": "markers",
+            "name": name,
+            "marker": marker,
+            "hovertext": [hover_texts[i] for i in picked],
+            "hoverinfo": "text",
+        }
+
+        if dimensions == 3:
+            traces.append(go.Scatter3d(x=coords[:, 0], y=coords[:, 1], z=coords[:, 2], **shared))
+        else:
+            traces.append(go.Scatter(x=coords[:, 0], y=coords[:, 1], **shared))
+
+    figure = go.Figure(data=traces)
+    figure.update_layout(
+        title=title,
+        width=880,
+        height=620,
+        margin={"l": 10, "r": 10, "t": 50, "b": 10},
+    )
+    figure.show()

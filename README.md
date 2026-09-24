@@ -12,9 +12,11 @@ The idea that runs through the whole session:
 | | Contents | Colab |
 |---|---|---|
 | [01_llm_fundamentals.ipynb](01_llm_fundamentals.ipynb) | Basic call, tokens, streaming, temperature, the memory experiment, the cost of context, Gradio, tools | [Open](https://colab.research.google.com/github/ingmiguelfernando/AIExperiment/blob/main/01_llm_fundamentals.ipynb) |
-| `02_rag.ipynb` | *(pending)* Embeddings, Chroma, 2D/3D visualisation, with and without RAG | |
+| [02_rag.ipynb](02_rag.ipynb) | Chunking, embeddings, Chroma, 2D/3D vector visualisation, with and without RAG | [Open](https://colab.research.google.com/github/ingmiguelfernando/AIExperiment/blob/main/02_rag.ipynb) |
 
 [helpers.py](helpers.py) holds the plotting and display code, so the notebooks stay readable on a shared screen. The notebooks download it automatically when they run in Colab.
+
+[knowledge-base/](knowledge-base) holds the documents used by the RAG notebook: sixteen Markdown files describing **KiwiAir**, a fictional New Zealand regional airline. Every name, figure and contract in there is invented.
 
 ## Setup
 
