@@ -163,4 +163,6 @@ def plot_vectors(vectors, labels, hover_texts, dimensions=2, title="The knowledg
         height=620,
         margin={"l": 10, "r": 10, "t": 50, "b": 10},
     )
-    figure.show()
+
+    # display() rather than figure.show(): the latter needs JavaScript that VS Code will not run.
+    display(figure)
