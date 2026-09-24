@@ -83,3 +83,31 @@ def plot_token_growth(sent_per_turn, cumulative) -> None:
     axis.legend()
     axis.grid(alpha=0.3)
     plt.show()
+
+
+def launch_chat(respond, title=""):
+    """Launch a Gradio chat window, smoothing over differences between Gradio versions.
+
+    `respond` always receives history as OpenAI-style message dicts.
+    """
+    import inspect
+
+    import gradio as gr
+
+    def adapted(message, history):
+        if all(isinstance(item, dict) for item in history):
+            history = [{"role": item["role"], "content": item["content"]} for item in history]
+        else:
+            history = [
+                {"role": role, "content": text}
+                for user_text, assistant_text in history
+                for role, text in (("user", user_text), ("assistant", assistant_text))
+                if text
+            ]
+
+        yield from respond(message, history)
+
+    supports_type = "type" in inspect.signature(gr.ChatInterface.__init__).parameters
+    options = {"type": "messages"} if supports_type else {}
+
+    return gr.ChatInterface(adapted, title=title, **options).launch()
