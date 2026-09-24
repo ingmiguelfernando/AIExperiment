@@ -10,7 +10,7 @@
 
 ## Background
 
-Priya Raman joined KiwiAir from a telecommunications company where she led a contact centre of 240 people. Before that she spent six years in hospitality operations across Queenstown and Wānaka.
+Priya Raman joined Takahe Air from a telecommunications company where she led a contact centre of 240 people. Before that she spent six years in hospitality operations across Queenstown and Wānaka.
 
 She holds a Bachelor of Tourism Management from Lincoln University.
 
@@ -37,4 +37,4 @@ She holds a Bachelor of Tourism Management from Lincoln University.
 
 ## Notes
 
-Priya authored the "no hidden fees" pricing commitment that became one of KiwiAir's four stated values. She is the internal escalation point for any customer issue that has not been resolved within five working days.
+Priya authored the "no hidden fees" pricing commitment that became one of Takahe Air's four stated values. She is the internal escalation point for any customer issue that has not been resolved within five working days.

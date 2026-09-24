@@ -10,7 +10,7 @@
 
 ## Background
 
-Sarah Bennett joined KiwiAir from a Big Four accounting firm where she was a partner in the transport and infrastructure practice. She led the due diligence on KiwiAir's Series A round in 2022 and joined the company six months later.
+Sarah Bennett joined Takahe Air from a Big Four accounting firm where she was a partner in the transport and infrastructure practice. She led the due diligence on Takahe Air's Series A round in 2022 and joined the company six months later.
 
 She is a Chartered Accountant and holds a Bachelor of Commerce and Administration from Victoria University of Wellington.
 
@@ -35,4 +35,4 @@ She is a Chartered Accountant and holds a Bachelor of Commerce and Administratio
 
 ## Notes
 
-Sarah is the executive sponsor of the annual pay equity review. She has committed publicly to KiwiAir not listing before 2029 and has structured the FY2027 capital plan accordingly.
+Sarah is the executive sponsor of the annual pay equity review. She has committed publicly to Takahe Air not listing before 2029 and has structured the FY2027 capital plan accordingly.

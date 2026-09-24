@@ -16,7 +16,7 @@ The idea that runs through the whole session:
 
 [helpers.py](helpers.py) holds the plotting and display code, so the notebooks stay readable on a shared screen. The notebooks download it automatically when they run in Colab.
 
-[knowledge-base/](knowledge-base) holds the documents used by the RAG notebook: sixteen Markdown files describing **KiwiAir**, a fictional New Zealand regional airline. Every name, figure and contract in there is invented.
+[knowledge-base/](knowledge-base) holds the documents used by the RAG notebook: sixteen Markdown files describing **Takahe Air**, a fictional New Zealand regional airline. Every name, figure and contract in there is invented.
 
 ## Setup
 

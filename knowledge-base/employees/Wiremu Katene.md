@@ -27,7 +27,7 @@ He holds an Airline Transport Pilot Licence with ATR 72 and Cessna 208 type rati
 
 **2021 — Exceeds expectations.** Built the safety management system from nothing to Civil Aviation Authority acceptance in fourteen months.
 
-**2023 — Outstanding.** Led the response to the Westport runway excursion incident. The investigation found no injuries and no aircraft damage, and the Civil Aviation Authority commended KiwiAir's voluntary disclosure and transparency.
+**2023 — Outstanding.** Led the response to the Westport runway excursion incident. The investigation found no injuries and no aircraft damage, and the Civil Aviation Authority commended Takahe Air's voluntary disclosure and transparency.
 
 **2025 — Exceeds expectations.** Recruited and trained eleven first officers during a national pilot shortage. Development note: Wiremu resists delegating check-and-training duties.
 
@@ -35,4 +35,4 @@ He holds an Airline Transport Pilot Licence with ATR 72 and Cessna 208 type rati
 
 ## Notes
 
-Wiremu holds the authority to ground any KiwiAir aircraft without consulting the executive team, and has exercised it four times. On each occasion the board has publicly backed the decision. He runs the internal "stop the line" training that underpins the company's third stated value.
+Wiremu holds the authority to ground any Takahe Air aircraft without consulting the executive team, and has exercised it four times. On each occasion the board has publicly backed the decision. He runs the internal "stop the line" training that underpins the company's third stated value.

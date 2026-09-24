@@ -10,7 +10,7 @@
 
 ## Background
 
-Hana Reweti spent eleven years at a larger New Zealand carrier, finishing as General Manager of Regional Operations. She left in 2018 after her proposal to retain four regional routes was rejected, and founded KiwiAir the following year with Tomas Vella.
+Hana Reweti spent eleven years at a larger New Zealand carrier, finishing as General Manager of Regional Operations. She left in 2018 after her proposal to retain four regional routes was rejected, and founded Takahe Air the following year with Tomas Vella.
 
 She holds a Bachelor of Commerce from Victoria University of Wellington and completed the Advanced Management Programme at INSEAD in 2017. She is of Ngāti Porou descent and grew up in Ruatoria.
 
@@ -24,7 +24,7 @@ She holds a Bachelor of Commerce from Victoria University of Wellington and comp
 | 2025 | 310,000 | 95,000 | First profitable year |
 | 2026 | 330,000 | 110,000 | Network expansion to 15 destinations |
 
-Hana holds 23 percent of KiwiAir Holdings Limited.
+Hana holds 23 percent of Takahe Air Holdings Limited.
 
 ## Performance reviews
 

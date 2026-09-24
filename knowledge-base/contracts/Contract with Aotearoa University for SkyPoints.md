@@ -1,7 +1,7 @@
-# Contract — Aotearoa University and KiwiAir (SkyPoints)
+# Contract — Aotearoa University and Takahe Air (SkyPoints)
 
 **Agreement reference:** KA-CON-2025-031
-**Parties:** KiwiAir Holdings Limited and Aotearoa University
+**Parties:** Takahe Air Holdings Limited and Aotearoa University
 **Effective date:** 1 January 2025
 **Term:** 2 years, expiring 31 December 2026
 
@@ -16,13 +16,13 @@ A corporate SkyPoints account under which all points earned by staff travelling 
 ## Commercial terms
 
 - **Corporate earning rate:** 1.5 SkyPoints per NZD 1 spent, against the standard rate of 1 point per NZD 1.
-- **Automatic tier:** the corporate account is held at Kākā tier for the duration of the term regardless of volume, which includes free KiwiFlex on all bookings.
+- **Automatic tier:** the corporate account is held at Kākā tier for the duration of the term regardless of volume, which includes free TakaheFlex on all bookings.
 - **Redemption:** standard rate of 100 points equals NZD 1, with no restrictions.
 - **Payment terms:** 45 days from invoice, aligned to the university's procurement policy.
 
 ## Personal travel carve-out
 
-Staff booking personal travel through the university's travel portal earn points to their own SkyPoints account at the standard rate. The corporate account earns nothing on these bookings. Segregation is handled by a cost-centre flag passed through the KiwiConnect API.
+Staff booking personal travel through the university's travel portal earn points to their own SkyPoints account at the standard rate. The corporate account earns nothing on these bookings. Segregation is handled by a cost-centre flag passed through the TakaheConnect API.
 
 ## Student fares
 
@@ -32,7 +32,7 @@ Student fare uptake was 4,100 sectors in 2025.
 
 ## Reporting
 
-KiwiAir provides a quarterly report covering spend by cost centre, points balance and movement, carbon emissions per sector, and unused ticket value.
+Takahe Air provides a quarterly report covering spend by cost centre, points balance and movement, carbon emissions per sector, and unused ticket value.
 
 The carbon reporting requirement was added at the university's request to support its sustainability disclosures.
 

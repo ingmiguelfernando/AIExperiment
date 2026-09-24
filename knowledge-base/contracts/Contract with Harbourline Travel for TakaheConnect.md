@@ -1,22 +1,22 @@
-# Contract — Harbourline Travel and KiwiAir (KiwiConnect)
+# Contract — Harbourline Travel and Takahe Air (TakaheConnect)
 
 **Agreement reference:** KA-CON-2024-022
-**Parties:** KiwiAir Holdings Limited and Harbourline Travel Group Limited
+**Parties:** Takahe Air Holdings Limited and Harbourline Travel Group Limited
 **Effective date:** 1 September 2024
 **Term:** 3 years, expiring 31 August 2027
 
 ## Background
 
-Harbourline Travel Group is a travel agency network with 34 branches across New Zealand. It was KiwiAir's first Strategic tier KiwiConnect partner and remains the largest by segment volume.
+Harbourline Travel Group is a travel agency network with 34 branches across New Zealand. It was Takahe Air's first Strategic tier TakaheConnect partner and remains the largest by segment volume.
 
 ## Scope
 
-Harbourline Travel has production access to the KiwiConnect API for searching, booking, ticketing and managing KiwiAir inventory across the full network.
+Harbourline Travel has production access to the TakaheConnect API for searching, booking, ticketing and managing Takahe Air inventory across the full network.
 
 ## Commercial terms
 
 - **Partner tier:** Strategic.
-- **Commission:** 7 percent of base fare, excluding taxes and the KiwiFlex supplement.
+- **Commission:** 7 percent of base fare, excluding taxes and the TakaheFlex supplement.
 - **Segment volume:** 41,200 segments in the first contract year, against a Strategic tier threshold of 25,000.
 - **Licence fee:** none.
 - **Payment:** commission netted off weekly settlement.
@@ -30,7 +30,7 @@ Harbourline Travel has production access to the KiwiConnect API for searching, b
 
 ## Availability credits
 
-Where monthly availability falls below commitment, KiwiAir credits commission as follows:
+Where monthly availability falls below commitment, Takahe Air credits commission as follows:
 
 | Availability | Credit |
 |---|---|
@@ -42,11 +42,11 @@ No credits have been issued. Actual availability across the first contract year 
 
 ## Branding
 
-Harbourline Travel may display the KiwiAir logo in branch and online. KiwiAir may name Harbourline Travel as a reference customer in sales material, which it does in KiwiConnect partner onboarding.
+Harbourline Travel may display the Takahe Air logo in branch and online. Takahe Air may name Harbourline Travel as a reference customer in sales material, which it does in TakaheConnect partner onboarding.
 
 ## Escalation
 
-Technical escalation runs to the KiwiConnect platform team, with final escalation to Tomas Vella. Commercial escalation runs to the Commercial team.
+Technical escalation runs to the TakaheConnect platform team, with final escalation to Tomas Vella. Commercial escalation runs to the Commercial team.
 
 ## Renewal
 

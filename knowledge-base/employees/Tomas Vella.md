@@ -21,14 +21,14 @@ He holds a Bachelor of Engineering (Software) from the University of Canterbury.
 | 2019 | 95,000 | — | Below market by choice during seed stage |
 | 2021 | 175,000 | — | Restored to band after Series A |
 | 2023 | 265,000 | 40,000 | Series B completion |
-| 2025 | 285,000 | 80,000 | KiwiConnect revenue milestone |
+| 2025 | 285,000 | 80,000 | TakaheConnect revenue milestone |
 | 2026 | 300,000 | 90,000 | Platform reliability targets met |
 
-Tomas holds 18 percent of KiwiAir Holdings Limited.
+Tomas holds 18 percent of Takahe Air Holdings Limited.
 
 ## Performance reviews
 
-**2024 — Outstanding.** Turned the internal booking platform into KiwiConnect, a revenue-generating product, within nine months of the decision. Board noted this as the clearest example of the airline's engineering investment paying back.
+**2024 — Outstanding.** Turned the internal booking platform into TakaheConnect, a revenue-generating product, within nine months of the decision. Board noted this as the clearest example of the airline's engineering investment paying back.
 
 **2025 — Exceeds expectations.** Platform availability reached 99.95 percent. Development note: the platform team's reliance on Tomas for architectural decisions is a concentration risk.
 
@@ -36,4 +36,4 @@ Tomas holds 18 percent of KiwiAir Holdings Limited.
 
 ## Notes
 
-Tomas made the decision in 2020 to build the booking platform in-house during the border-closure shutdown rather than licence a third-party system. This decision produced KiwiConnect, which generated NZD 14.2 million in FY2026. He has described it publicly as "the most expensive decision we ever got right".
+Tomas made the decision in 2020 to build the booking platform in-house during the border-closure shutdown rather than licence a third-party system. This decision produced TakaheConnect, which generated NZD 14.2 million in FY2026. He has described it publicly as "the most expensive decision we ever got right".
