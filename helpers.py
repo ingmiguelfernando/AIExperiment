@@ -10,7 +10,7 @@ import html
 
 import matplotlib.pyplot as plt
 import numpy as np
-from IPython.display import HTML, display
+from IPython.display import HTML, Markdown, display
 
 _PALETTE = ["#ffd6a5", "#caffbf", "#9bf6ff", "#bdb2ff", "#ffc6ff", "#fdffb6"]
 _PLOT_COLOURS = ["#4c78a8", "#f58518", "#54a24b", "#e45756", "#b279a2"]
@@ -112,6 +112,12 @@ def launch_chat(respond, title=""):
     options = {"type": "messages"} if supports_type else {}
 
     return gr.ChatInterface(adapted, title=title, **options).launch()
+
+
+def show_answer(text, title=None):
+    """Render a model reply as Markdown, so bold and bullets show up as formatting."""
+    heading = f"#### {title}\n\n" if title else ""
+    display(Markdown(heading + (text or "_(the model returned nothing)_")))
 
 
 def plot_vectors(vectors, labels, hover_texts, dimensions=2, title="The knowledge base as geometry"):
