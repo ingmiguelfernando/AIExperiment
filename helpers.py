@@ -120,22 +120,39 @@ def show_answer(text, title=None):
     display(Markdown(heading + (text or "_(the model returned nothing)_")))
 
 
-def plot_vectors(vectors, labels, hover_texts=None, dimensions=2, title="The knowledge base as geometry"):
-    """Squash embeddings down to 2D or 3D with t-SNE and plot them coloured by label."""
+def plot_vectors(
+    vectors,
+    labels,
+    hover_texts=None,
+    dimensions=2,
+    title="The knowledge base as geometry",
+    reducer="tsne",
+):
+    """Squash embeddings down to 2D or 3D and plot them coloured by label.
+
+    t-SNE needs a decent number of points to say anything; use `reducer="pca"` for small sets.
+    """
     import plotly.graph_objects as go
-    from sklearn.manifold import TSNE
 
     vectors = np.asarray(vectors)
-    # Perplexity roughly sets how many neighbours count as "local". Too high on a small
-    # collection and every point looks like everyone's neighbour, which smears the clusters.
-    perplexity = max(5, min(30, len(vectors) // 6))
 
-    reduced = TSNE(
-        n_components=dimensions,
-        random_state=42,
-        perplexity=perplexity,
-        init="pca",
-    ).fit_transform(vectors)
+    if reducer == "pca":
+        from sklearn.decomposition import PCA
+
+        reduced = PCA(n_components=dimensions, random_state=42).fit_transform(vectors)
+    else:
+        from sklearn.manifold import TSNE
+
+        # Perplexity roughly sets how many neighbours count as "local". Too high on a small
+        # collection and every point looks like everyone's neighbour, which smears the clusters.
+        perplexity = max(5, min(30, len(vectors) // 6))
+
+        reduced = TSNE(
+            n_components=dimensions,
+            random_state=42,
+            perplexity=perplexity,
+            init="pca",
+        ).fit_transform(vectors)
 
     if hover_texts is None:
         hover_texts = list(labels)
