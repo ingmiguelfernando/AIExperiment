@@ -122,10 +122,13 @@ def show_answer(text, title=None):
 
 def plot_vectors(vectors, labels, hover_texts=None, dimensions=2, title="The knowledge base as geometry"):
     """Squash embeddings down to 2D or 3D with t-SNE and plot them coloured by label."""
+    import plotly.graph_objects as go
     from sklearn.manifold import TSNE
 
     vectors = np.asarray(vectors)
-    perplexity = min(30, max(5, len(vectors) - 1))
+    # Perplexity roughly sets how many neighbours count as "local". Too high on a small
+    # collection and every point looks like everyone's neighbour, which smears the clusters.
+    perplexity = max(5, min(30, len(vectors) // 6))
 
     reduced = TSNE(
         n_components=dimensions,
@@ -134,26 +137,31 @@ def plot_vectors(vectors, labels, hover_texts=None, dimensions=2, title="The kno
         init="pca",
     ).fit_transform(vectors)
 
-    groups = sorted(set(labels))
-    figure = plt.figure(figsize=(9, 6.5))
-    axis = figure.add_subplot(projection="3d") if dimensions == 3 else figure.add_subplot()
+    if hover_texts is None:
+        hover_texts = list(labels)
 
-    for position, name in enumerate(groups):
+    traces = []
+    for position, name in enumerate(sorted(set(labels))):
         picked = [i for i, label in enumerate(labels) if label == name]
         coords = reduced[picked]
-        colour = _PLOT_COLOURS[position % len(_PLOT_COLOURS)]
+        shared = {
+            "mode": "markers",
+            "name": name,
+            "marker": {"size": 5, "color": _PLOT_COLOURS[position % len(_PLOT_COLOURS)], "opacity": 0.85},
+            "hovertext": [hover_texts[i] for i in picked],
+            "hoverinfo": "text",
+        }
 
         if dimensions == 3:
-            axis.scatter(coords[:, 0], coords[:, 1], coords[:, 2], s=28, color=colour, label=name, alpha=0.85)
+            traces.append(go.Scatter3d(x=coords[:, 0], y=coords[:, 1], z=coords[:, 2], **shared))
         else:
-            axis.scatter(coords[:, 0], coords[:, 1], s=34, color=colour, label=name, alpha=0.85)
+            traces.append(go.Scatter(x=coords[:, 0], y=coords[:, 1], **shared))
 
-    axis.set_title(title)
-    axis.legend(loc="best", frameon=True)
-    axis.set_xticks([])
-    axis.set_yticks([])
-    if dimensions == 3:
-        axis.set_zticks([])
-
-    plt.tight_layout()
-    plt.show()
+    figure = go.Figure(data=traces)
+    figure.update_layout(
+        title=title,
+        width=880,
+        height=620,
+        margin={"l": 10, "r": 10, "t": 50, "b": 10},
+    )
+    figure.show()
