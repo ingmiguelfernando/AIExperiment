@@ -120,15 +120,9 @@ def show_answer(text, title=None):
     display(Markdown(heading + (text or "_(the model returned nothing)_")))
 
 
-def plot_vectors(vectors, labels, hover_texts, dimensions=2, title="The knowledge base as geometry"):
+def plot_vectors(vectors, labels, hover_texts=None, dimensions=2, title="The knowledge base as geometry"):
     """Squash embeddings down to 2D or 3D with t-SNE and plot them coloured by label."""
-    import plotly.graph_objects as go
-    import plotly.io as pio
     from sklearn.manifold import TSNE
-
-    # Colab defaults to a renderer that only injects JavaScript, which VS Code will not run.
-    # Emitting the Plotly mime type as well keeps the chart visible in both.
-    pio.renderers.default = "plotly_mimetype+notebook_connected"
 
     vectors = np.asarray(vectors)
     perplexity = min(30, max(5, len(vectors) - 1))
@@ -141,31 +135,25 @@ def plot_vectors(vectors, labels, hover_texts, dimensions=2, title="The knowledg
     ).fit_transform(vectors)
 
     groups = sorted(set(labels))
-    colours = {name: _PLOT_COLOURS[i % len(_PLOT_COLOURS)] for i, name in enumerate(groups)}
+    figure = plt.figure(figsize=(9, 6.5))
+    axis = figure.add_subplot(projection="3d") if dimensions == 3 else figure.add_subplot()
 
-    traces = []
-    for name in groups:
+    for position, name in enumerate(groups):
         picked = [i for i, label in enumerate(labels) if label == name]
         coords = reduced[picked]
-        marker = {"size": 5, "color": colours[name], "opacity": 0.85}
-        shared = {
-            "mode": "markers",
-            "name": name,
-            "marker": marker,
-            "hovertext": [hover_texts[i] for i in picked],
-            "hoverinfo": "text",
-        }
+        colour = _PLOT_COLOURS[position % len(_PLOT_COLOURS)]
 
         if dimensions == 3:
-            traces.append(go.Scatter3d(x=coords[:, 0], y=coords[:, 1], z=coords[:, 2], **shared))
+            axis.scatter(coords[:, 0], coords[:, 1], coords[:, 2], s=28, color=colour, label=name, alpha=0.85)
         else:
-            traces.append(go.Scatter(x=coords[:, 0], y=coords[:, 1], **shared))
+            axis.scatter(coords[:, 0], coords[:, 1], s=34, color=colour, label=name, alpha=0.85)
 
-    figure = go.Figure(data=traces)
-    figure.update_layout(
-        title=title,
-        width=880,
-        height=620,
-        margin={"l": 10, "r": 10, "t": 50, "b": 10},
-    )
-    figure.show()
+    axis.set_title(title)
+    axis.legend(loc="best", frameon=True)
+    axis.set_xticks([])
+    axis.set_yticks([])
+    if dimensions == 3:
+        axis.set_zticks([])
+
+    plt.tight_layout()
+    plt.show()
